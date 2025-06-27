@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "Redact Paste",
+    "version": "1.0",
+    "description": "Redacts sensitive information from pasted text.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "clipboardRead",
+        "clipboardWrite",
+        "offscreen"
+    ],
+    "background": {
+        "service_worker": "src/background.ts",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content.ts"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "offscreen": {
+        "reasons": [
+            "BLOBS"
+        ],
+        "justification": "Required for running ML model inference with transformers.js.",
+        "path": "offscreen.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "models/deberta_finetuned_pii/*",
+                "wasm/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
+}

@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/background.ts","./src/content.ts","./src/main.tsx","./src/vite-env.d.ts","./src/components/ui/card.tsx","./src/lib/utils.ts","./src/pipeline/pipeline.ts","./src/pipeline/types.ts","./src/pipeline/redactors/llm-redactor.ts","./src/pipeline/redactors/regex-redactor.ts","./vite.config.ts"],"errors":true,"version":"5.8.3"}
