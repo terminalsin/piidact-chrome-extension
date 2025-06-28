@@ -1,4 +1,4 @@
-<img width="200px" src=".docs/logo.png"/>
+<img width="200px" src=".docs/logo.png"/> <img src="https://media.discordapp.net/attachments/1190473807178256435/1388612998482104420/PIIdact_Logo1.png?ex=68619e22&is=68604ca2&hm=a400dcae13ebc3b658deb4243cb91eed9d8681d75b71e480f759208d3258fab4&=&format=webp&quality=lossless&width=1030&height=412"/>
 
 # PIIdact - Protect your privacy
 
